@@ -153,7 +153,7 @@ char recomecar(char matriz[50][50],char matriz2[50][50],char acao,int altura,int
         }
         cout << endl;
 
-        cout << player << ", DESEJA JOGAR NOVAMENTE ? (S PARA SIM, N PARA N�O) : " << endl;
+        cout << player << ", DESEJA JOGAR NOVAMENTE ? (S PARA SIM, N PARA NAO) : " << endl;
         cin >> jogarNovamente;
         if (jogarNovamente == 's' || jogarNovamente == 'S')
         {
@@ -164,7 +164,7 @@ char recomecar(char matriz[50][50],char matriz2[50][50],char acao,int altura,int
         {
             if (jogarNovamente == 'n' || jogarNovamente == 'N')
             {
-                cout << "AT� A PR�XIMA! " << player << endl;
+                cout << "ATE A PROXIMA! " << player << endl;
                 acao = 's';
                 break;
             }
@@ -172,7 +172,7 @@ char recomecar(char matriz[50][50],char matriz2[50][50],char acao,int altura,int
             {
                 if((jogarNovamente != 's' && jogarNovamente != 'S') || (jogarNovamente != 'n' && jogarNovamente != 'N'))
                 {
-                    cout << "DIGITO INV�LIDO! DIGITE NOVAMENTE. (S PARA SIM, N PARA N�O)" << endl ;
+                    cout << "DIGITO INVALIDO! DIGITE NOVAMENTE. (S PARA SIM, N PARA NAO)" << endl ;
                     cin >> jogarNovamente;
                     if (jogarNovamente == 's' || jogarNovamente == 'S')
                     {
@@ -356,8 +356,8 @@ void mostra (char matriz[50][50], char matriz2[50][50],int altura,int largura,ch
         if(gameover(matriz,matriz2,altura,largura))
         {
 
-            cout << "PARAB�NS " << player << endl;
-            cout << "VOC� VENCEU" << endl;
+            cout << "PARABENS " << player << endl;
+            cout << "VOCÊ VENCEU" << endl;
             cout << " SEU TEMPO FOI: " << tempototal << " SEGUNDOS " <<  endl;
             if(escolha==1 || escolha==2)
             {
@@ -418,9 +418,9 @@ void mostra (char matriz[50][50], char matriz2[50][50],int altura,int largura,ch
         cout << "D -> " << "DESCOBRIR QUADRADO " << endl;
         cout << "M -> " << "MARCAR MINA " << endl;
         cout << "T -> " << "TALVEZ MINA " << endl;
-        cout << "L -> " << "LIMPAR MARCA��O " << endl;
+        cout << "L -> " << "LIMPAR MARCACAO " << endl;
         cout << "S -> " << "SAIR " << endl;
-        cout << "DIGITE A OP��O SEGUIDA DAS COORDENADAS DO QUADRO " << endl;
+        cout << "DIGITE A OPCAO SEGUIDA DAS COORDENADAS DO QUADRO " << endl;
         cin >> acao;
         if (acao == 's' || acao == 'S')
         {
@@ -435,7 +435,7 @@ void mostra (char matriz[50][50], char matriz2[50][50],int altura,int largura,ch
             if(matriz[m][n]=='*')
             {
                 cout << " QUE PENA, " << player << endl;
-                cout << " VOC� PERDEU! " << endl;
+                cout << " VOCÊ PERDEU! " << endl;
                 cout << " SEU TEMPO FOI: " << tempototal << " SEGUNDOS " <<  endl;
                 acao=recomecar(matriz,matriz2,acao,altura,largura,player,grava,le,p1,p2,escolha);
                 break;
@@ -503,13 +503,13 @@ void novojogo(char matriz[50][50],char matriz2[50][50],char player[40],ofstream 
             {
                 do
                 {
-                    cout << "Digite a dimens�o da matriz : " << endl;
+                    cout << "Digite a dimensão da matriz : " << endl;
                     cin >> altura >> largura ;
 
                     if (altura > 40 || largura > 40)
                     {
-                        cout << "Dimens�o da matriz inv�lida! Digite novamente" << endl;
-                        cout << "Digite a dimens�o da matriz : " << endl;
+                        cout << "Dimensão da matriz inválida! Digite novamente" << endl;
+                        cout << "Digite a dimensão da matriz : " << endl;
                         cin >> altura >> largura ;
                     }
                 }
@@ -522,7 +522,7 @@ void novojogo(char matriz[50][50],char matriz2[50][50],char player[40],ofstream 
 
                     if (qtdbomb > ((altura*largura)-10))
                     {
-                        cout << "Quantidade de bombas inv�lida! Digite novamente" << endl;
+                        cout << "Quantidade de bombas invalida! Digite novamente" << endl;
                         cout << "Digite a quantidade de bombas desejadas : " << endl;
                         cin >> qtdbomb ;
 
@@ -562,7 +562,7 @@ int menu(int escolha,char matriz[50][50],char matriz2[50][50],char player[40],if
         cout << endl;
         cout << endl;
         cout << " " << player << ",";
-        cout << " ESCOLHA UMA OP��O " << endl;
+        cout << " ESCOLHA UMA OPCAO " << endl;
         cout << " 1 - NOVO JOGO " << endl;
         cout << " 2 - MELHORES TEMPOS " << endl;
         cout << " 3 - SAIR " << endl;
@@ -570,8 +570,8 @@ int menu(int escolha,char matriz[50][50],char matriz2[50][50],char player[40],if
 
         if (escolha!=3 && escolha!=2 && escolha!=1)
         {
-            cout << "OP��O INV�LIDA! DIGITE NOVAMENTE" << endl << endl;
-            cout << " ESCOLHA UMA OP��O " << endl;
+            cout << "OPCAO INVALIDA! DIGITE NOVAMENTE" << endl << endl;
+            cout << " ESCOLHA UMA OPCAO " << endl;
             cout << " 1 - NOVO JOGO " << endl;
             cout << " 2 - MELHORES TEMPOS " << endl;
             cout << " 3 - SAIR " << endl;
@@ -585,24 +585,24 @@ int menu(int escolha,char matriz[50][50],char matriz2[50][50],char player[40],if
     {
         do
         {
-            cout << player <<", ESCOLHA UMA OP��O " << endl;
+            cout << player <<", ESCOLHA UMA OPCAO " << endl;
             cout << endl;
             cout << endl;
             cout << endl;
             cout << " 1 - INICIANTE " << endl;
-            cout << " 2 - INTERMEDI�RIO " << endl;
+            cout << " 2 - INTERMEDIARIO " << endl;
             cout << " 3 - PERSONALIZADO " << endl;
             cout << " 4 - VOLTAR " << endl;
             cin >> difi;
             cin.ignore();
             if (difi != 1 && difi != 2 && difi != 3 && difi != 4)
             {
-                cout << "DIGITO INV�LIDO. DIGITE NOVAMENTE.";
+                cout << "DIGITO INVALIDO. DIGITE NOVAMENTE.";
                 cout << endl;
                 cout << endl;
                 cout << endl;
                 cout << " 1 - INICIANTE " << endl;
-                cout << " 2 - INTERMEDI�RIO " << endl;
+                cout << " 2 - INTERMEDIARIO " << endl;
                 cout << " 3 - PERSONALIZADO " << endl;
                 cout << " 4 - VOLTAR " << endl;
                 cin >> difi;
@@ -663,7 +663,7 @@ int menu(int escolha,char matriz[50][50],char matriz2[50][50],char player[40],if
             cout << p1[2].nome << " " << p1[3].time << endl;
             le>> p1[4].nome >> p1[5].time;
             cout << p1[4].nome << " " << p1[5].time << endl;
-            cout << " MODO INTERMEDI�RIO " <<endl;
+            cout << " MODO INTERMEDIÁRIO " <<endl;
             le>> p1[6].nome >> p1[7].time;
             cout << p1[6].nome << " " << p1[7].time << endl;
             le>> p1[8].nome >> p1[9].time;
@@ -676,7 +676,7 @@ int menu(int escolha,char matriz[50][50],char matriz2[50][50],char player[40],if
         }
         else if (escolha == 3)
         {
-            cout << "AT� A PR�XIMA!" << endl;
+            cout << "ATE A PROXIMA!" << endl;
         }
 
     }
@@ -696,7 +696,7 @@ int main()
     cout << "      BEM-VINDO " << endl;
     cout << "         AO " << endl;
     cout << "    CAMPO MINADO " << endl;
-    cout << "  OL�, COMO SE CHAMA? " << endl;
+    cout << "  OLA, COMO SE CHAMA? " << endl;
     cin.getline(player,40);
     cout << endl;
 
